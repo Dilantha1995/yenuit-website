@@ -253,6 +253,15 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-
 .trial-banner.show{display:block}
 .trial-banner a{color:#fff;font-weight:800;text-decoration:underline;margin-left:8px}
 
+/* CLIENTS SECTION */
+.clients-sec{padding:60px 40px;max-width:1140px;margin:0 auto}
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.client-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 18px;text-align:center;transition:all .2s}
+.client-card:hover{border-color:var(--blue3);box-shadow:0 8px 20px rgba(24,73,169,.08);transform:translateY(-2px)}
+.client-logo{width:64px;height:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;margin:0 auto 12px;letter-spacing:-.04em}
+.client-nm{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:3px}
+.client-sub{font-size:11px;color:var(--t2);line-height:1.5}
+
 /* ADMIN EDIT */
 .admin-bar{position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:#fff;padding:8px 20px;display:none;align-items:center;gap:8px;z-index:300;font-size:12px;flex-wrap:wrap}
 .admin-bar.on{display:flex}
@@ -309,9 +318,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-
   </div>
   <div class="nav-tabs">
     <button class="ntab on"  onclick="showPage('home',this)">🏠 Home</button>
+    <button class="ntab"     onclick="showPage('products',this)">🗂️ Products</button>
     <button class="ntab"     onclick="showPage('features',this)">⚡ Features</button>
     <button class="ntab"     onclick="showPage('pricing',this)">💎 Pricing</button>
     <a href="yenuit-about.html" style="text-decoration:none"><button class="ntab">👤 Our Story</button></a>
+    <a href="yenuit-contact.html" style="text-decoration:none"><button class="ntab">📞 Contact</button></a>
   </div>
   <div class="nav-right">
     <a href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener"><button class="btn-out">Sign In</button></a>
@@ -386,6 +397,39 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-
   <div class="ed" id="ed-s2" style="text-align:center"><div class="ed-tag">✏ Edit</div><div class="snum" id="s2n">5–7</div><div class="slbl" id="s2l">days avg. paper approval cycle</div></div>
   <div class="ed" id="ed-s3" style="text-align:center"><div class="ed-tag">✏ Edit</div><div class="snum" id="s3n">1–2</div><div class="slbl" id="s3l">days with PayFlow Pro</div></div>
   <div class="ed" id="ed-s4" style="text-align:center"><div class="ed-tag">✏ Edit</div><div class="snum" id="s4n">USD 7.5B</div><div class="slbl" id="s4l">AP automation market by 2030</div></div>
+</div>
+
+<!-- TRUSTED BY (Clients grid) -->
+<div class="clients-sec">
+  <div style="text-align:center;margin-bottom:30px">
+    <div class="sl">Trusted by</div>
+    <div style="font-size:26px;font-weight:900;color:var(--navy);letter-spacing:-.3px">Growing SMEs using PayFlow Pro in production</div>
+  </div>
+  <div class="clients-grid">
+    <div class="client-card">
+      <div class="client-logo" style="background:linear-gradient(135deg,#1849a9,#0d2d6e);color:#fff">PS</div>
+      <div class="client-nm">PSMS Group</div>
+      <div class="client-sub">Medical Systems · Maldives</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo" style="background:linear-gradient(135deg,#0a6670,#0d4a52);color:#fff">PP</div>
+      <div class="client-nm">Propharma</div>
+      <div class="client-sub">Pharmaceutical Distribution · Maldives</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff">MX</div>
+      <div class="client-nm">Medex Pharmacy</div>
+      <div class="client-sub">Retail Pharmacy · Maldives</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo" style="background:linear-gradient(135deg,#166534,#14532d);color:#fff">SC</div>
+      <div class="client-nm">Synergy Care Clinic</div>
+      <div class="client-sub">Healthcare · Maldives</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:24px">
+    <p style="font-size:12px;color:var(--t3)">Want your company listed here? <button onclick="openSignup()" style="background:none;border:none;color:var(--blue);font-weight:700;font-size:12px;cursor:pointer;text-decoration:underline;padding:0">Start a free trial →</button></p>
+  </div>
 </div>
 
 <div class="sec">
@@ -501,6 +545,116 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-
 </div>
 </div>
 
+<!-- ══════════════ PRODUCTS PAGE ══════════════ -->
+<div class="page" id="page-products">
+  <div class="feat-hero">
+    <div class="sl" style="color:var(--blue)">Our Products</div>
+    <h1>Business solutions built for SMEs</h1>
+    <p>Every Yenuit product solves one real business problem — cleanly, simply, and without the enterprise-software bloat. PayFlow Pro is live today. More coming.</p>
+  </div>
+
+  <!-- PAYFLOW PRO — Flagship Product -->
+  <div style="max-width:1140px;margin:0 auto;padding:40px 40px 60px">
+    <div style="background:linear-gradient(135deg,#0d2d6e 0%,#1849a9 100%);border-radius:20px;padding:50px 40px;color:#fff;position:relative;overflow:hidden;margin-bottom:40px">
+      <div style="position:absolute;top:-40px;right:-40px;width:280px;height:280px;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%);pointer-events:none"></div>
+      <div style="position:relative;z-index:1">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:11px;font-weight:700;margin-bottom:18px">
+          <div style="width:7px;height:7px;background:#22c55e;border-radius:50%;box-shadow:0 0 8px #22c55e"></div>
+          LIVE · Available worldwide
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap">
+          <div style="width:56px;height:56px;background:#fff;color:#1849a9;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900">💳</div>
+          <h2 style="font-size:42px;font-weight:900;letter-spacing:-1px;margin:0">PayFlow Pro</h2>
+        </div>
+        <p style="font-size:18px;color:rgba(255,255,255,.85);margin-bottom:22px;max-width:700px;line-height:1.6">Digital payment voucher management. Replace paper PVs with multi-entity approval workflows, digital signatures, recurring payments, and QuickBooks / Odoo sync.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:28px">
+          <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:14px"><div style="font-size:11px;color:rgba(255,255,255,.6);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Entities</div><div style="font-size:22px;font-weight:900;margin-top:2px">Unlimited</div></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:14px"><div style="font-size:11px;color:rgba(255,255,255,.6);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Users</div><div style="font-size:22px;font-weight:900;margin-top:2px">Unlimited</div></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:14px"><div style="font-size:11px;color:rgba(255,255,255,.6);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Currencies</div><div style="font-size:22px;font-weight:900;margin-top:2px">All</div></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:14px"><div style="font-size:11px;color:rgba(255,255,255,.6);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Free Trial</div><div style="font-size:22px;font-weight:900;margin-top:2px">30 days</div></div>
+        </div>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener">
+            <button style="padding:15px 30px;background:#fff;color:#1849a9;border:none;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.12)">▶ Open Live Demo App</button>
+          </a>
+          <button onclick="openSignup()" style="padding:15px 28px;background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.4);border-radius:10px;font-size:15px;font-weight:700;cursor:pointer">Start Free 30-Day Trial →</button>
+          <button onclick="showPage('features',document.querySelectorAll('.ntab')[2])" style="padding:15px 28px;background:transparent;color:#fff;border:none;font-size:14px;font-weight:600;cursor:pointer;text-decoration:underline">See all features</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key features grid -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:40px">
+      <div style="padding:20px;background:#fff;border:1px solid var(--border);border-radius:12px">
+        <div style="width:40px;height:40px;background:var(--blue2);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px">🔄</div>
+        <div style="font-weight:800;color:var(--navy);margin-bottom:5px">Multi-step Approval</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.6">Configurable chain per department. 0-3 pre-approval steps before Accounts team.</div>
+      </div>
+      <div style="padding:20px;background:#fff;border:1px solid var(--border);border-radius:12px">
+        <div style="width:40px;height:40px;background:var(--blue2);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px">✍️</div>
+        <div style="font-weight:800;color:var(--navy);margin-bottom:5px">Digital Signatures</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.6">Upload once. Auto-applied on every PV you check or approve. Visible on screen and print.</div>
+      </div>
+      <div style="padding:20px;background:#fff;border:1px solid var(--border);border-radius:12px">
+        <div style="width:40px;height:40px;background:var(--blue2);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px">🔁</div>
+        <div style="font-weight:800;color:var(--navy);margin-bottom:5px">Recurring Payments</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.6">Weekly / monthly / quarterly / yearly. Auto-generates draft PVs on schedule.</div>
+      </div>
+      <div style="padding:20px;background:#fff;border:1px solid var(--border);border-radius:12px">
+        <div style="width:40px;height:40px;background:var(--blue2);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px">📊</div>
+        <div style="font-weight:800;color:var(--navy);margin-bottom:5px">Custom Reports</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.6">Build your own reports. Export as CSV / Excel / PDF. Dashboard charts included.</div>
+      </div>
+      <div style="padding:20px;background:#fff;border:1px solid var(--border);border-radius:12px">
+        <div style="width:40px;height:40px;background:var(--blue2);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px">🔗</div>
+        <div style="font-weight:800;color:var(--navy);margin-bottom:5px">QB / Odoo Sync</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.6">Auto-sync paid PVs to QuickBooks Online or Odoo as expense entries.</div>
+      </div>
+      <div style="padding:20px;background:#fff;border:1px solid var(--border);border-radius:12px">
+        <div style="width:40px;height:40px;background:var(--blue2);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px">🏢</div>
+        <div style="font-weight:800;color:var(--navy);margin-bottom:5px">Multi-Entity</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.6">Manage multiple companies under one login. Entity-specific logos on every PV.</div>
+      </div>
+    </div>
+
+    <!-- COMING SOON SECTION -->
+    <div style="text-align:center;margin:40px 0 30px">
+      <div class="sl" style="color:var(--blue)">Coming Soon</div>
+      <h2 style="font-size:32px;font-weight:900;color:var(--navy);letter-spacing:-.5px;margin-bottom:10px">More SME tools on the way</h2>
+      <p style="color:var(--t2);max-width:540px;margin:0 auto;line-height:1.7">Same Yenuit philosophy — replace paper, save time, reduce errors. Built alongside accountants who actually use them daily.</p>
+    </div>
+
+    <div class="ys-grid">
+      <div class="ys-card">
+        <div class="ys-icon" style="background:#fef3c7;color:#92400e">📊</div>
+        <div class="ys-nm">InvoiceFlow <span class="ys-badge soon">COMING Q3</span></div>
+        <div class="ys-d">Sales invoice management with custom branding, auto-reminders, payment tracking. The sibling to PayFlow Pro for revenue-side workflows.</div>
+        <button onclick="notifyProduct('InvoiceFlow')" style="margin-top:14px;padding:8px 16px;background:none;color:var(--blue);border:1.5px solid var(--blue3);border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;width:100%">🔔 Notify me when launched</button>
+      </div>
+      <div class="ys-card">
+        <div class="ys-icon" style="background:#e0e7ff;color:#4338ca">👥</div>
+        <div class="ys-nm">HRFlow <span class="ys-badge soon">COMING Q4</span></div>
+        <div class="ys-d">Employee attendance, leave management, and payroll for small teams. Mobile check-in, no complex setup, geo-fenced attendance.</div>
+        <button onclick="notifyProduct('HRFlow')" style="margin-top:14px;padding:8px 16px;background:none;color:var(--blue);border:1.5px solid var(--blue3);border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;width:100%">🔔 Notify me when launched</button>
+      </div>
+      <div class="ys-card">
+        <div class="ys-icon" style="background:#fce7f3;color:#9f1239">📦</div>
+        <div class="ys-nm">StockFlow <span class="ys-badge soon">COMING 2027</span></div>
+        <div class="ys-d">Inventory and purchase orders for retail, pharmacy, and small warehouses. Barcode scanning on any phone. Integrates with PayFlow Pro.</div>
+        <button onclick="notifyProduct('StockFlow')" style="margin-top:14px;padding:8px 16px;background:none;color:var(--blue);border:1.5px solid var(--blue3);border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;width:100%">🔔 Notify me when launched</button>
+      </div>
+    </div>
+
+    <div style="margin-top:50px;padding:30px;background:var(--bg);border-radius:14px;text-align:center">
+      <div style="font-size:18px;font-weight:800;color:var(--navy);margin-bottom:6px">Have a workflow idea?</div>
+      <div style="font-size:14px;color:var(--t2);max-width:560px;margin:0 auto 14px;line-height:1.7">Yenuit products come from real pain points. If your SME has a repetitive paper-heavy process that's slowing your team down, tell us — we might build it next.</div>
+      <a href="mailto:hello@yenuit.com?subject=Product%20Idea" style="display:inline-block;padding:11px 22px;background:var(--blue);color:#fff;border-radius:8px;font-weight:700;font-size:13px">✉ Share your idea</a>
+    </div>
+  </div>
+</div>
+
 <!-- ══════════════ FEATURES PAGE ══════════════ -->
 <div class="page" id="page-features">
 <div class="feat-hero">
@@ -594,7 +748,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-
     </tbody>
   </table>
   <div style="text-align:center;margin-top:28px">
-    <button class="btn-pri" style="font-size:15px;padding:13px 32px" onclick="showPage('pricing',document.querySelectorAll('.ntab')[2])">See Full Pricing →</button>
+    <button class="btn-pri" style="font-size:15px;padding:13px 32px" onclick="showPage('pricing',document.querySelectorAll('.ntab')[3])">See Full Pricing →</button>
   </div>
 </div>
 </div><!-- end features -->
@@ -716,17 +870,19 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-
     </div>
     <div><div class="fc-hd">PayFlow Pro</div>
       <span class="fc-lk" onclick="showPage('home',document.querySelector('.ntab'))">Home</span>
-      <span class="fc-lk" onclick="showPage('features',document.querySelectorAll('.ntab')[1])">Features</span>
-      <span class="fc-lk" onclick="showPage('pricing',document.querySelectorAll('.ntab')[2])">Pricing</span>
+      <span class="fc-lk" onclick="showPage('products',document.querySelectorAll('.ntab')[1])">Products</span>
+      <span class="fc-lk" onclick="showPage('features',document.querySelectorAll('.ntab')[2])">Features</span>
+      <span class="fc-lk" onclick="showPage('pricing',document.querySelectorAll('.ntab')[3])">Pricing</span>
       <a class="fc-lk" href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
     </div>
     <div><div class="fc-hd">Company</div>
       <a class="fc-lk" href="yenuit-about.html">Our Story</a>
       <a class="fc-lk" href="yenuit-about.html">About Dilantha</a>
-      <span class="fc-lk">Blog (coming soon)</span>
+      <a class="fc-lk" href="yenuit-contact.html">Contact Us</a>
       <span class="fc-lk" style="color:rgba(255,255,255,.3)">More products coming</span>
     </div>
     <div><div class="fc-hd">Support</div>
+      <a class="fc-lk" href="yenuit-contact.html">Get in Touch</a>
       <span class="fc-lk">Privacy Policy</span>
       <span class="fc-lk">Terms of Service</span>
       <a class="fc-lk" href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener">Help Centre (in-app)</a>
@@ -891,6 +1047,18 @@ function showPage(id,btn){
   document.getElementById('page-'+id).classList.add('active');
   if(btn)btn.classList.add('on');
   window.scrollTo({top:0,behavior:'smooth'});
+}
+// PRODUCT NOTIFICATION SIGNUP (coming-soon products)
+function notifyProduct(name){
+  const email = prompt(`We'll email you when ${name} launches. Your email:`);
+  if(!email) return;
+  if(!email.includes('@')){ alert('Please enter a valid email'); return; }
+  try {
+    const notifs = JSON.parse(localStorage.getItem('yenuit_notify')||'[]');
+    notifs.push({ product:name, email, savedAt: new Date().toISOString() });
+    localStorage.setItem('yenuit_notify', JSON.stringify(notifs));
+  } catch(e){}
+  alert(`✓ You're on the ${name} waitlist!\nWe'll email ${email} when it launches.\n\n(For now, this is saved locally. When Yenuit has a mailing list backend, we'll migrate it.)`);
 }
 // FEATURE TABS
 function showFC(id,btn){
