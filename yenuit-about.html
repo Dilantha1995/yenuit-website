@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story — Yenuit Solutions | yenuit.com</title>
+<meta name="description" content="How Yenuit Solutions and PayFlow Pro were built by Dilantha — an accountant with a vision to digitise business workflows for SMEs worldwide.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0d2d6e;--blue:#1849a9;--blue2:#eef2fc;--green:#166534;--green2:#dcfce7;--text:#1c2030;--t2:#5c6478;--t3:#9ba3b5;--border:#dde1e8;--bg:#f4f6f9;--r:10px;--r2:16px}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);background:#fff;line-height:1.7}
+a{color:var(--blue);text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-box{width:34px;height:34px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff}
+.nav-brand{font-size:17px;font-weight:800;color:var(--navy)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--t2);transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--navy);font-weight:700}
+.nav-cta a{padding:8px 20px;border:none;border-radius:8px;font-size:13px;font-weight:700;color:#fff;background:var(--blue);cursor:pointer}
+
+/* HERO */
+.story-hero{padding:80px 40px 60px;background:linear-gradient(160deg,#f8f9ff 0%,var(--blue2) 100%);text-align:center}
+.story-badge{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--blue);border:1px solid #c7d7f4;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;margin-bottom:24px}
+.story-hero h1{font-size:48px;font-weight:900;color:var(--navy);line-height:1.1;margin-bottom:16px;letter-spacing:-.5px;max-width:700px;margin-left:auto;margin-right:auto}
+.story-hero p{font-size:17px;color:var(--t2);max-width:560px;margin:0 auto}
+
+/* FOUNDER SECTION */
+.founder-section{max-width:960px;margin:0 auto;padding:70px 40px}
+.founder-grid{display:grid;grid-template-columns:280px 1fr;gap:50px;align-items:start}
+.founder-photo{text-align:center}
+.founder-photo-circle{width:200px;height:200px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--navy));display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:900;color:#fff;margin:0 auto 16px;overflow:hidden;border:5px solid #fff;box-shadow:0 12px 40px rgba(13,45,110,.2);position:relative}
+.founder-photo-circle img{width:100%;height:100%;object-fit:cover}
+.founder-photo-circle .initials{font-size:56px;font-weight:900;color:#fff;letter-spacing:-.02em}
+.founder-name{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.founder-title{font-size:13px;color:var(--t2)}
+.founder-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:12px}
+.ftag{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--blue2);color:var(--blue)}
+
+/* STORY CONTENT */
+.story-content h2{font-size:30px;font-weight:800;color:var(--navy);margin-bottom:12px;margin-top:40px;line-height:1.2}
+.story-content h2:first-child{margin-top:0}
+.story-content p{font-size:15px;color:var(--t2);margin-bottom:16px;line-height:1.8}
+.story-content .highlight{background:var(--blue2);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:14px 18px;margin:20px 0;font-style:italic;color:var(--navy);font-size:15px}
+
+/* QUALIFICATIONS */
+.quals-section{background:var(--bg);padding:70px 40px}
+.quals-inner{max-width:960px;margin:0 auto}
+.quals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.qual-card{background:#fff;border:1px solid var(--border);border-radius:var(--r2);padding:22px;transition:all .2s}
+.qual-card:hover{border-color:var(--blue);box-shadow:0 8px 30px rgba(24,73,169,.08);transform:translateY(-2px)}
+.qual-icon{font-size:32px;margin-bottom:10px}
+.qual-title{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.qual-sub{font-size:12px;color:var(--t2);line-height:1.6}
+
+/* JOURNEY TIMELINE */
+.journey-section{max-width:960px;margin:0 auto;padding:70px 40px}
+.section-label{font-size:11px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.section-title{font-size:34px;font-weight:900;color:var(--navy);margin-bottom:8px}
+
+.journey-timeline{margin-top:40px;position:relative;padding-left:32px}
+.journey-timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--blue),var(--green))}
+.jt-item{position:relative;margin-bottom:36px}
+.jt-dot{position:absolute;left:-26px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--blue);border:3px solid #fff;box-shadow:0 0 0 2px var(--blue)}
+.jt-year{font-size:11px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.jt-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.jt-desc{font-size:14px;color:var(--t2);line-height:1.7}
+
+/* MISSION */
+.mission-section{background:linear-gradient(135deg,var(--navy),#1849a9);padding:70px 40px;color:#fff;text-align:center}
+.mission-section h2{font-size:36px;font-weight:900;margin-bottom:16px}
+.mission-section p{font-size:17px;opacity:.8;max-width:580px;margin:0 auto 32px}
+.mission-values{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:960px;margin:40px auto 0}
+.mv-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r2);padding:22px;text-align:center}
+.mv-ic{font-size:28px;margin-bottom:10px}
+.mv-title{font-size:13px;font-weight:700;margin-bottom:6px}
+.mv-desc{font-size:12px;opacity:.65;line-height:1.6}
+
+/* GALLERY */
+.gallery-section{max-width:960px;margin:0 auto;padding:70px 40px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.gallery-item{border-radius:var(--r2);overflow:hidden;aspect-ratio:4/3;background:var(--blue2);display:flex;align-items:center;justify-content:center;font-size:36px;border:1px solid var(--border);cursor:pointer;position:relative}
+.gallery-item img{width:100%;height:100%;object-fit:cover}
+.gallery-item .gallery-placeholder{text-align:center;padding:20px}
+.gallery-item .gallery-placeholder p{font-size:11px;color:var(--t2);margin-top:8px}
+
+/* CTA */
+.cta-section{background:var(--bg);padding:70px 40px;text-align:center}
+.cta-section h2{font-size:34px;font-weight:900;color:var(--navy);margin-bottom:12px}
+.cta-section p{font-size:16px;color:var(--t2);max-width:520px;margin:0 auto 28px}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.6);padding:40px;text-align:center;font-size:13px}
+
+/* ADMIN EDIT PANEL */
+.admin-edit-bar{position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:#fff;padding:10px 20px;display:flex;align-items:center;gap:12px;z-index:200;font-size:12px;display:none}
+.admin-edit-bar.visible{display:flex}
+.edit-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:5px 12px;color:#fff;font-size:11px;cursor:pointer;transition:all .15s}
+.edit-btn:hover{background:rgba(255,255,255,.25)}
+.edit-btn.active{background:var(--blue)}
+.edit-overlay{position:fixed;inset:0;background:rgba(5,10,25,.6);z-index:300;display:none;align-items:center;justify-content:center;padding:20px}
+.edit-overlay.open{display:flex}
+.edit-modal{background:#fff;border-radius:16px;width:680px;max-width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.em-header{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.em-title{font-size:15px;font-weight:800;color:var(--text)}
+.em-close{background:none;border:none;font-size:18px;cursor:pointer;color:var(--t2)}
+.em-body{padding:20px 22px}
+.em-footer{padding:12px 22px;border-top:1px solid var(--border);display:flex;gap:8px;justify-content:flex-end}
+.em-field{margin-bottom:14px}
+.em-label{display:block;font-size:11px;font-weight:700;color:var(--t2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.em-input,.em-textarea,.em-select{width:100%;font-size:13px;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;outline:none;font-family:inherit;color:var(--text)}
+.em-input:focus,.em-textarea:focus{border-color:var(--blue)}
+.em-textarea{resize:vertical;min-height:80px}
+.em-btn{padding:9px 20px;border-radius:8px;border:1px solid var(--border);background:#fff;color:var(--text);font-size:13px;font-weight:600;cursor:pointer}
+.em-btn-p{background:var(--blue);color:#fff;border-color:var(--blue)}
+.editable-section{position:relative;transition:outline .15s}
+.editable-section.edit-mode{outline:2px dashed var(--blue);outline-offset:4px;cursor:pointer}
+.edit-indicator{display:none;position:absolute;top:4px;right:4px;background:var(--blue);color:#fff;font-size:9px;font-weight:800;padding:2px 8px;border-radius:20px;z-index:10;pointer-events:none;text-transform:uppercase;letter-spacing:.06em}
+.editable-section.edit-mode .edit-indicator{display:block}
+
+@media(max-width:768px){
+  .founder-grid,.quals-grid,.mission-values,.gallery-grid{grid-template-columns:1fr}
+  .story-hero h1{font-size:34px}
+  nav{padding:0 16px}
+  .founder-section,.quals-section .quals-inner,.journey-section,.gallery-section,.cta-section,.quals-section{padding:50px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-box">Y</div>
+    <div style="display:flex;flex-direction:column;line-height:1.1">
+      <span class="nav-brand">yenuit</span>
+      <span style="font-size:9px;font-weight:600;color:var(--t2);letter-spacing:.08em;text-transform:uppercase">Business Solutions</span>
+    </div>
+    <div style="width:1px;height:30px;background:var(--border);margin:0 6px"></div>
+    <span style="font-size:13px;font-weight:700;color:var(--blue);background:var(--blue2);padding:4px 10px;border-radius:5px">💳 PayFlow Pro</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html">Features</a>
+    <a href="index.html">Pricing</a>
+    <a href="#" class="active">Our Story</a>
+  </div>
+  <div class="nav-cta">
+    <a href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener">Sign In →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="story-hero editable-section" id="sec-hero">
+  <div class="edit-indicator">✏ Click to Edit</div>
+  <div class="story-badge">🚀 Built by an accountant, for accountants</div>
+  <h1 id="hero-title">The story behind Yenuit Solutions</h1>
+  <p id="hero-sub">From paper vouchers in Malé to a growing family of SME business tools — a journey driven by a simple frustration and a determination to build something better. PayFlow Pro is our first product. More coming soon.</p>
+</div>
+
+<!-- FOUNDER -->
+<div class="founder-section">
+  <div class="founder-grid">
+    <div class="founder-photo editable-section" id="sec-photo">
+      <div class="edit-indicator">✏ Edit Photo</div>
+      <div class="founder-photo-circle" id="founderPhotoEl">
+        <span class="initials" id="founderInitials">DL</span>
+      </div>
+      <div class="founder-name" id="founderName">Dilantha</div>
+      <div class="founder-title" id="founderTitle">Head of Accounts · PSMS Group, Male', Maldives</div>
+      <div class="founder-tags">
+        <span class="ftag" id="tag1">ACCA Student</span>
+        <span class="ftag" id="tag2">MCom</span>
+        <span class="ftag" id="tag3">ERP Specialist</span>
+        <span class="ftag" id="tag4">Maldives</span>
+        <span class="ftag" id="tag5">Sri Lanka</span>
+      </div>
+    </div>
+
+    <div class="story-content editable-section" id="sec-story">
+      <div class="edit-indicator">✏ Edit Story</div>
+      <h2 id="story-h1">The problem I lived every day</h2>
+      <p id="story-p1">Every morning, managing accounts for four business entities — Pro Synergy Medical Systems, Propharma Maldives, Synergy Care Clinic, and Medex Pharmacy — I watched the same scene play out. Staff would hand-write a payment voucher, attach a paper invoice, walk it to my desk, I would check it, sign it, then walk it to the MD's office. The MD would sign it, I would file it, and eventually make the bank transfer. The next morning, someone would call asking "where is my payment?" — and I would start hunting through a pile of paper.</p>
+      <p id="story-p2">I had been doing this for years. And across Male', across Colombo, across every small business in South Asia and beyond — so was everyone else. Paper payment vouchers, manual approval chains, lost invoices, and no audit trail. It was 2026, and the majority of SMEs were still running payments on paper.</p>
+      <div class="highlight" id="story-quote">"I didn't set out to build a software company. I set out to solve my own problem — and then realised it was everyone's problem."</div>
+      <h2 id="story-h2">Building with AI as a partner</h2>
+      <p id="story-p3">What made PayFlow Pro possible was a new kind of development partnership: working with Claude, Anthropic's AI assistant, as a co-creator. I know accounts. I know IFRS. I know what a Head of Accounts needs at 9am when three urgent payments are sitting on her desk and the MD is in a meeting. But I don't have a computer science degree. Using Claude, I could describe exactly what I needed and have it built — feature by feature, screen by screen. The AI handled the code; I handled the product thinking.</p>
+      <p id="story-p4">This isn't just a story about one app. It's a story about what becomes possible when deep domain expertise meets AI capability. PayFlow Pro is the proof of concept — but the model applies everywhere. Any expert, in any field, can now build the tool they always wished existed.</p>
+      <h2 id="story-h3">What PayFlow Pro means to me</h2>
+      <p id="story-p5">This is not a side project. This is the crystallisation of years of operational experience, accounting knowledge, and a genuine frustration with how things work. Every feature in PayFlow Pro — the cheque printing for Maldivian banks, the dual MVR/USD workflow, the Deloitte-audit-ready history trail, the QB Online sync — came from a real problem I personally experienced or saw colleagues struggle with. It is built for the accountant who has to explain to the MD why a payment is delayed. It is built for the staff member who doesn't know which ledger account to use. It is built for the business owner who wants to approve payments from their phone at 10pm. It is, simply, the system I always wished I had.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUALIFICATIONS -->
+<div class="quals-section">
+  <div class="quals-inner">
+    <div class="section-label">Qualifications & Background</div>
+    <div class="section-title" id="quals-title">Built on deep expertise</div>
+    <div class="quals-grid" id="qualsGrid">
+      <div class="qual-card editable-section" id="sec-q1">
+        <div class="edit-indicator">✏ Edit</div>
+        <div class="qual-icon">🎓</div>
+        <div class="qual-title" id="q1-title">ACCA — Strategic Professional</div>
+        <div class="qual-sub" id="q1-desc">Association of Chartered Certified Accountants. Registration No. 5687560. 8 exemptions received. 5 Strategic Professional papers remaining: SBL, SBR, and optional papers including AFM and AAA.</div>
+      </div>
+      <div class="qual-card editable-section" id="sec-q2">
+        <div class="edit-indicator">✏ Edit</div>
+        <div class="qual-icon">📚</div>
+        <div class="qual-title" id="q2-title">MCom — University of Kelaniya</div>
+        <div class="qual-sub" id="q2-desc">Master of Commerce from the University of Kelaniya, Sri Lanka. Research focus: factors affecting unit trust fund performance in Sri Lanka. Strong foundation in financial analysis and investment theory.</div>
+      </div>
+      <div class="qual-card editable-section" id="sec-q3">
+        <div class="edit-indicator">✏ Edit</div>
+        <div class="qual-icon">💼</div>
+        <div class="qual-title" id="q3-title">10+ Years in Accounting & Finance</div>
+        <div class="qual-sub" id="q3-desc">Multi-entity accounting across healthcare, pharmaceutical, biomedical and distribution businesses. Expert in QBO, Odoo ERP, MIRA compliance (GST/BPT), Aasandha/NSPA claims, and IFRS financial reporting.</div>
+      </div>
+      <div class="qual-card editable-section" id="sec-q4">
+        <div class="edit-indicator">✏ Edit</div>
+        <div class="qual-icon">🏢</div>
+        <div class="qual-title" id="q4-title">ERP Project Lead</div>
+        <div class="qual-sub" id="q4-desc">Leading Odoo ERP migration project for PSMS Group targeting January 2027 go-live. Modules: Accounting, Purchasing, Inventory, Sales, HR, POS. Budget: USD 21,000–36,500 one-time implementation.</div>
+      </div>
+      <div class="qual-card editable-section" id="sec-q5">
+        <div class="edit-indicator">✏ Edit</div>
+        <div class="qual-icon">🌍</div>
+        <div class="qual-title" id="q5-title">Maldives & Sri Lanka</div>
+        <div class="qual-sub" id="q5-desc">Deep understanding of the Maldivian business environment — MIRA taxation, BML banking, Aasandha insurance, Dhivehi regulatory context — combined with Sri Lankan commercial and academic background.</div>
+      </div>
+      <div class="qual-card editable-section" id="sec-q6">
+        <div class="edit-indicator">✏ Edit</div>
+        <div class="qual-icon">🤖</div>
+        <div class="qual-title" id="q6-title">AI-Native Builder</div>
+        <div class="qual-sub" id="q6-desc">Partnered with Claude (Anthropic) to build PayFlow Pro from the ground up — demonstrating that deep domain expertise combined with AI capability can produce enterprise-grade software without a traditional development team.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JOURNEY TIMELINE -->
+<div class="journey-section">
+  <div class="section-label">The Journey</div>
+  <div class="section-title" id="journey-title">From accountant to founder</div>
+  <div class="journey-timeline" id="journeyTimeline">
+    <div class="jt-item editable-section" id="sec-jt1">
+      <div class="edit-indicator">✏ Edit</div>
+      <div class="jt-dot"></div>
+      <div class="jt-year" id="jt1-year">2015–2022</div>
+      <div class="jt-title" id="jt1-title">Accounting career — Sri Lanka & Maldives</div>
+      <div class="jt-desc" id="jt1-desc">Built a career in accounting and finance across Sri Lanka and the Maldives. Completed MCom at University of Kelaniya. Developed deep expertise in multi-entity financial management, tax compliance, and ERP systems.</div>
+    </div>
+    <div class="jt-item editable-section" id="sec-jt2">
+      <div class="edit-indicator">✏ Edit</div>
+      <div class="jt-dot"></div>
+      <div class="jt-year" id="jt2-year">2022 – 2026</div>
+      <div class="jt-title" id="jt2-title">M7 Enterprises — Assistant General Manager, Accounts & Sales</div>
+      <div class="jt-desc" id="jt2-desc">Managed accounts and sales operations for M7 Book Store in Male'. Led school season voucher projects, managed supplier relationships, and handled multi-currency financial operations in the Maldivian market.</div>
+    </div>
+    <div class="jt-item editable-section" id="sec-jt3">
+      <div class="edit-indicator">✏ Edit</div>
+      <div class="jt-dot"></div>
+      <div class="jt-year" id="jt3-year">2026</div>
+      <div class="jt-title" id="jt3-title">PSMS Group — Head of Accounts & ERP Project Lead</div>
+      <div class="jt-desc" id="jt3-desc">Joined Pro Synergy Medical Systems Group managing accounts across four entities: PSMS, Propharma Maldives, Synergy Care Clinic, and Medex Pharmacy. Leading the Odoo ERP migration project alongside ongoing ACCA studies.</div>
+    </div>
+    <div class="jt-item editable-section" id="sec-jt4">
+      <div class="edit-indicator">✏ Edit</div>
+      <div class="jt-dot" style="background:var(--green)"></div>
+      <div class="jt-year" id="jt4-year">April 2026</div>
+      <div class="jt-title" id="jt4-title">PayFlow Pro — Founded</div>
+      <div class="jt-desc" id="jt4-desc">After years of managing paper-based payment processes, built PayFlow Pro using Claude AI as a development partner. The product went from concept to live deployment in weeks. First customer: PSMS Group. Mission: to bring digital payment workflows to every SME in the world.</div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery-section">
+  <div class="section-label">Gallery</div>
+  <div class="section-title" id="gallery-title">Building PayFlow Pro</div>
+  <p style="color:var(--t2);font-size:14px;margin-top:8px" id="gallery-sub">Photos from the journey — the team, the office, the process.</p>
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item editable-section" id="gal1" onclick="editGalleryItem('gal1')">
+      <div class="edit-indicator">✏ Add Photo</div>
+      <div class="gallery-placeholder"><div style="font-size:40px">📸</div><p>Click to add photo</p></div>
+    </div>
+    <div class="gallery-item editable-section" id="gal2" onclick="editGalleryItem('gal2')">
+      <div class="edit-indicator">✏ Add Photo</div>
+      <div class="gallery-placeholder"><div style="font-size:40px">🖼</div><p>Add photo or image</p></div>
+    </div>
+    <div class="gallery-item editable-section" id="gal3" onclick="editGalleryItem('gal3')">
+      <div class="edit-indicator">✏ Add Photo</div>
+      <div class="gallery-placeholder"><div style="font-size:40px">🏢</div><p>Office / workplace</p></div>
+    </div>
+    <div class="gallery-item editable-section" id="gal4" onclick="editGalleryItem('gal4')">
+      <div class="edit-indicator">✏ Add Photo</div>
+      <div class="gallery-placeholder"><div style="font-size:40px">📱</div><p>Product screenshots</p></div>
+    </div>
+    <div class="gallery-item editable-section" id="gal5" onclick="editGalleryItem('gal5')">
+      <div class="edit-indicator">✏ Add Photo</div>
+      <div class="gallery-placeholder"><div style="font-size:40px">🎓</div><p>Academic achievements</p></div>
+    </div>
+    <div class="gallery-item editable-section" id="gal6" onclick="editGalleryItem('gal6')">
+      <div class="edit-indicator">✏ Add Photo</div>
+      <div class="gallery-placeholder"><div style="font-size:40px">🌊</div><p>Male', Maldives</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION -->
+<div class="mission-section">
+  <h2 id="mission-title">Our Mission</h2>
+  <p id="mission-text">PayFlow Pro exists to help every SME in the world move from paper to digital. We believe that great financial management software should not be reserved for large enterprises with big budgets. It should be accessible, affordable, and built for the way real businesses work.</p>
+  <div class="mission-values">
+    <div class="mv-card"><div class="mv-ic">🎯</div><div class="mv-title">Purpose-Built</div><div class="mv-desc">Every feature solves a real problem. No bloat, no unnecessary complexity.</div></div>
+    <div class="mv-card"><div class="mv-ic">🌍</div><div class="mv-title">Emerging Markets First</div><div class="mv-desc">Designed for South Asia, MENA, and Africa — where paper is still the norm.</div></div>
+    <div class="mv-card"><div class="mv-ic">🤖</div><div class="mv-title">AI-Powered</div><div class="mv-desc">Claude AI helps us build faster and helps you work smarter.</div></div>
+    <div class="mv-card"><div class="mv-ic">💎</div><div class="mv-title">Affordable</div><div class="mv-desc">Enterprise-quality at SME prices. Starting from USD 19/month.</div></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Ready to try PayFlow Pro?</h2>
+  <p>Join growing businesses moving from paper to digital payment workflows.</p>
+  <a href="index.html" style="display:inline-block;padding:14px 32px;background:var(--blue);color:#fff;border-radius:10px;font-size:15px;font-weight:700;margin-right:10px">See Pricing →</a>
+  <a href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener" style="display:inline-block;padding:14px 24px;background:#fff;color:var(--navy);border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-weight:600">Try Live Demo</a>
+</div>
+
+<footer>
+  <div style="max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <span>© 2026 Yenuit Solutions Pvt Ltd · yenuit.com</span>
+    <span>Built with 🤖 Claude AI (Anthropic)</span>
+    <span>hello@yenuit.com</span>
+  </div>
+</footer>
+
+<!-- ADMIN EDIT BAR -->
+<div class="admin-edit-bar" id="adminBar">
+  <span style="font-size:11px;font-weight:700;opacity:.7">✏ Page Editor</span>
+  <button class="edit-btn active" id="editModeBtn" onclick="toggleEditMode()">Edit Mode: ON</button>
+  <button class="edit-btn" onclick="editHero()">Edit Hero</button>
+  <button class="edit-btn" onclick="editFounder()">Edit Profile</button>
+  <button class="edit-btn" onclick="addJourneyItem()">+ Add Journey</button>
+  <button class="edit-btn" onclick="editMission()">Edit Mission</button>
+  <button class="edit-btn" onclick="uploadFounderPhoto()">📷 Update Photo</button>
+  <span style="margin-left:auto;font-size:10px;opacity:.5">Admin Only</span>
+  <button class="edit-btn" onclick="document.getElementById('adminBar').classList.remove('visible');editMode=false;updateEditMode()">✕ Exit</button>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="edit-overlay" id="editOverlay" onclick="if(event.target===this)closeEdit()">
+  <div class="edit-modal">
+    <div class="em-header"><div class="em-title" id="editModalTitle">Edit Section</div><button class="em-close" onclick="closeEdit()">✕</button></div>
+    <div class="em-body" id="editModalBody"></div>
+    <div class="em-footer"><button class="em-btn em-btn-p" id="editSaveBtn" onclick="saveEdit()">Save Changes</button><button class="em-btn" onclick="closeEdit()">Cancel</button></div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div id="adminLoginBar" style="position:fixed;bottom:16px;right:16px;z-index:100">
+  <button onclick="showAdminLogin()" style="background:var(--navy);color:#fff;border:none;border-radius:20px;padding:6px 14px;font-size:11px;font-weight:700;cursor:pointer;opacity:.6">⚙ Admin</button>
+</div>
+
+<script>
+// ── ADMIN AUTH ──────────────────────────────────────
+const ADMIN_PASS = 'Yenuit@Admin2026';
+let editMode = false;
+let currentEditTarget = null;
+
+function showAdminLogin(){
+  const pw=prompt('Enter admin password to edit this page:');
+  if(pw===ADMIN_PASS){
+    document.getElementById('adminBar').classList.add('visible');
+    document.getElementById('adminLoginBar').style.display='none';
+    editMode=true;updateEditMode();
+    alert('✅ Admin mode enabled. Click any section to edit it, or use the toolbar above.');
+  } else if(pw!==null){
+    alert('Incorrect password.');
+  }
+}
+
+function toggleEditMode(){
+  editMode=!editMode;
+  document.getElementById('editModeBtn').textContent=`Edit Mode: ${editMode?'ON':'OFF'}`;
+  document.getElementById('editModeBtn').classList.toggle('active',editMode);
+  updateEditMode();
+}
+
+function updateEditMode(){
+  document.querySelectorAll('.editable-section').forEach(el=>{
+    el.classList.toggle('edit-mode',editMode);
+    if(editMode){
+      el.style.cursor='pointer';
+      el.onclick=(e)=>{
+        // find the section id
+        editSectionById(el.id);
+        e.stopPropagation();
+      };
+    } else {
+      el.style.cursor='';
+      el.onclick=null;
+    }
+  });
+}
+
+function editSectionById(id){
+  const handlers={
+    'sec-hero':editHero,'sec-photo':()=>uploadFounderPhoto(),
+    'sec-story':editStory,'sec-q1':()=>editQual('q1'),
+    'sec-q2':()=>editQual('q2'),'sec-q3':()=>editQual('q3'),
+    'sec-q4':()=>editQual('q4'),'sec-q5':()=>editQual('q5'),'sec-q6':()=>editQual('q6'),
+    'sec-jt1':()=>editJourneyItem('jt1'),'sec-jt2':()=>editJourneyItem('jt2'),
+    'sec-jt3':()=>editJourneyItem('jt3'),'sec-jt4':()=>editJourneyItem('jt4'),
+  };
+  if(id.startsWith('gal'))return editGalleryItem(id);
+  if(handlers[id])handlers[id]();
+  else toast(`Edit section: ${id}`);
+}
+
+function openEdit(title, bodyHTML, saveFn){
+  document.getElementById('editModalTitle').textContent=title;
+  document.getElementById('editModalBody').innerHTML=bodyHTML;
+  document.getElementById('editSaveBtn').onclick=saveFn;
+  document.getElementById('editOverlay').classList.add('open');
+}
+function closeEdit(){document.getElementById('editOverlay').classList.remove('open');}
+
+// ── EDIT FUNCTIONS ──────────────────────────────────
+function editHero(){
+  openEdit('Edit Hero Section',`
+    <div class="em-field"><label class="em-label">Main Heading</label>
+      <input class="em-input" id="eh_title" value="${document.getElementById('hero-title').textContent}"></div>
+    <div class="em-field"><label class="em-label">Subheading</label>
+      <textarea class="em-textarea" id="eh_sub">${document.getElementById('hero-sub').textContent}</textarea></div>
+  `,()=>{
+    document.getElementById('hero-title').textContent=document.getElementById('eh_title').value;
+    document.getElementById('hero-sub').textContent=document.getElementById('eh_sub').value;
+    closeEdit();showToast('Hero updated ✓');
+  });
+}
+
+function editStory(){
+  openEdit('Edit Your Story',`
+    <div class="em-field"><label class="em-label">Section 1 — Heading</label>
+      <input class="em-input" id="es_h1" value="${document.getElementById('story-h1').textContent}"></div>
+    <div class="em-field"><label class="em-label">Paragraph 1</label>
+      <textarea class="em-textarea" rows="4" id="es_p1">${document.getElementById('story-p1').textContent}</textarea></div>
+    <div class="em-field"><label class="em-label">Paragraph 2</label>
+      <textarea class="em-textarea" rows="3" id="es_p2">${document.getElementById('story-p2').textContent}</textarea></div>
+    <div class="em-field"><label class="em-label">Pull Quote</label>
+      <textarea class="em-textarea" rows="2" id="es_q">${document.getElementById('story-quote').textContent}</textarea></div>
+    <div class="em-field"><label class="em-label">Section 2 — Heading</label>
+      <input class="em-input" id="es_h2" value="${document.getElementById('story-h2').textContent}"></div>
+    <div class="em-field"><label class="em-label">Paragraph 3</label>
+      <textarea class="em-textarea" rows="4" id="es_p3">${document.getElementById('story-p3').textContent}</textarea></div>
+    <div class="em-field"><label class="em-label">Section 3 — Heading</label>
+      <input class="em-input" id="es_h3" value="${document.getElementById('story-h3').textContent}"></div>
+    <div class="em-field"><label class="em-label">Paragraph 5</label>
+      <textarea class="em-textarea" rows="4" id="es_p5">${document.getElementById('story-p5').textContent}</textarea></div>
+  `,()=>{
+    ['h1','h2','h3'].forEach(k=>{const el=document.getElementById(`story-${k}`);const inp=document.getElementById(`es_${k}`);if(el&&inp)el.textContent=inp.value;});
+    ['p1','p2','p3','p5'].forEach(k=>{const el=document.getElementById(`story-${k}`);const inp=document.getElementById(`es_${k}`);if(el&&inp)el.textContent=inp.value;});
+    document.getElementById('story-quote').textContent=document.getElementById('es_q').value;
+    closeEdit();showToast('Story updated ✓');
+  });
+}
+
+function editFounder(){
+  openEdit('Edit Founder Profile',`
+    <div class="em-field"><label class="em-label">Name</label>
+      <input class="em-input" id="ef_name" value="${document.getElementById('founderName').textContent}"></div>
+    <div class="em-field"><label class="em-label">Title / Role</label>
+      <input class="em-input" id="ef_title" value="${document.getElementById('founderTitle').textContent}"></div>
+    <div class="em-field"><label class="em-label">Tags (comma-separated)</label>
+      <input class="em-input" id="ef_tags" value="${['tag1','tag2','tag3','tag4','tag5'].map(id=>document.getElementById(id)?.textContent).filter(Boolean).join(', ')}"></div>
+  `,()=>{
+    document.getElementById('founderName').textContent=document.getElementById('ef_name').value;
+    document.getElementById('founderTitle').textContent=document.getElementById('ef_title').value;
+    const tags=document.getElementById('ef_tags').value.split(',').map(t=>t.trim()).filter(Boolean);
+    ['tag1','tag2','tag3','tag4','tag5'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=tags[i]||'';});
+    closeEdit();showToast('Profile updated ✓');
+  });
+}
+
+function editQual(key){
+  const titleEl=document.getElementById(`${key}-title`);
+  const descEl=document.getElementById(`${key}-desc`);
+  openEdit(`Edit Qualification Card`,`
+    <div class="em-field"><label class="em-label">Title</label>
+      <input class="em-input" id="eq_title" value="${titleEl.textContent}"></div>
+    <div class="em-field"><label class="em-label">Description</label>
+      <textarea class="em-textarea" id="eq_desc">${descEl.textContent}</textarea></div>
+  `,()=>{
+    titleEl.textContent=document.getElementById('eq_title').value;
+    descEl.textContent=document.getElementById('eq_desc').value;
+    closeEdit();showToast('Card updated ✓');
+  });
+}
+
+function editJourneyItem(key){
+  const yearEl=document.getElementById(`${key}-year`);
+  const titleEl=document.getElementById(`${key}-title`);
+  const descEl=document.getElementById(`${key}-desc`);
+  openEdit('Edit Journey Entry',`
+    <div class="em-field"><label class="em-label">Year / Period</label>
+      <input class="em-input" id="ej_year" value="${yearEl.textContent}"></div>
+    <div class="em-field"><label class="em-label">Title</label>
+      <input class="em-input" id="ej_title" value="${titleEl.textContent}"></div>
+    <div class="em-field"><label class="em-label">Description</label>
+      <textarea class="em-textarea" rows="4" id="ej_desc">${descEl.textContent}</textarea></div>
+  `,()=>{
+    yearEl.textContent=document.getElementById('ej_year').value;
+    titleEl.textContent=document.getElementById('ej_title').value;
+    descEl.textContent=document.getElementById('ej_desc').value;
+    closeEdit();showToast('Journey entry updated ✓');
+  });
+}
+
+function addJourneyItem(){
+  openEdit('Add Journey Entry',`
+    <div class="em-field"><label class="em-label">Year / Period</label><input class="em-input" id="aj_year" placeholder="e.g. 2027"></div>
+    <div class="em-field"><label class="em-label">Title</label><input class="em-input" id="aj_title" placeholder="Role or milestone"></div>
+    <div class="em-field"><label class="em-label">Description</label><textarea class="em-textarea" id="aj_desc" placeholder="What happened?"></textarea></div>
+  `,()=>{
+    const year=document.getElementById('aj_year').value;
+    const title=document.getElementById('aj_title').value;
+    const desc=document.getElementById('aj_desc').value;
+    if(!title)return;
+    const id='jt_'+Date.now();
+    const html=`<div class="jt-item editable-section edit-mode" id="sec_${id}" onclick="editJourneyItem('${id}')">
+      <div class="edit-indicator">✏ Edit</div>
+      <div class="jt-dot" style="background:var(--green)"></div>
+      <div class="jt-year" id="${id}-year">${year}</div>
+      <div class="jt-title" id="${id}-title">${title}</div>
+      <div class="jt-desc" id="${id}-desc">${desc}</div>
+    </div>`;
+    document.getElementById('journeyTimeline').insertAdjacentHTML('beforeend',html);
+    closeEdit();showToast('Journey entry added ✓');
+  });
+}
+
+function editMission(){
+  openEdit('Edit Mission',`
+    <div class="em-field"><label class="em-label">Title</label>
+      <input class="em-input" id="em_title" value="${document.getElementById('mission-title').textContent}"></div>
+    <div class="em-field"><label class="em-label">Text</label>
+      <textarea class="em-textarea" rows="4" id="em_text">${document.getElementById('mission-text').textContent}</textarea></div>
+  `,()=>{
+    document.getElementById('mission-title').textContent=document.getElementById('em_title').value;
+    document.getElementById('mission-text').textContent=document.getElementById('em_text').value;
+    closeEdit();showToast('Mission updated ✓');
+  });
+}
+
+function editGalleryItem(id){
+  if(!editMode)return;
+  openEdit('Add / Replace Gallery Photo',`
+    <div class="em-field"><label class="em-label">Upload Photo</label>
+      <input type="file" id="gal_file" accept="image/*" class="em-input" style="padding:6px">
+    </div>
+    <div class="em-field"><label class="em-label">Or enter image URL</label>
+      <input class="em-input" id="gal_url" placeholder="https://...">
+    </div>
+    <div class="em-field"><label class="em-label">Caption (optional)</label>
+      <input class="em-input" id="gal_cap" placeholder="Caption text">
+    </div>
+  `,()=>{
+    const el=document.getElementById(id);
+    const fileInput=document.getElementById('gal_file');
+    const urlInput=document.getElementById('gal_url').value;
+    const cap=document.getElementById('gal_cap').value;
+    
+    function setImg(src){
+      el.innerHTML=`<img src="${src}" alt="${cap}" style="width:100%;height:100%;object-fit:cover">
+        <div class="edit-indicator">✏ Edit Photo</div>
+        ${cap?`<div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.5);color:#fff;font-size:11px;padding:6px 10px">${cap}</div>`:''}`;
+      closeEdit();showToast('Photo added ✓');
+    }
+
+    if(fileInput?.files?.[0]){
+      const reader=new FileReader();
+      reader.onload=r=>setImg(r.target.result);
+      reader.readAsDataURL(fileInput.files[0]);
+    } else if(urlInput){
+      setImg(urlInput);
+    } else {
+      closeEdit();
+    }
+  });
+}
+
+function uploadFounderPhoto(){
+  const input=document.createElement('input');input.type='file';input.accept='image/*';
+  input.onchange=e=>{
+    const f=e.target.files[0];if(!f)return;
+    const r=new FileReader();
+    r.onload=ev=>{
+      const el=document.getElementById('founderPhotoEl');
+      el.innerHTML=`<img src="${ev.target.result}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`;
+      showToast('Photo updated ✓');
+    };r.readAsDataURL(f);
+  };input.click();
+}
+
+// ── TOAST ──────────────────────────────────────────
+function showToast(msg){
+  let t=document.getElementById('siteToast');
+  if(!t){t=document.createElement('div');t.id='siteToast';t.style.cssText='position:fixed;top:20px;right:20px;background:#166534;color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;z-index:9999;box-shadow:0 8px 30px rgba(0,0,0,.2);transition:opacity .3s';document.body.appendChild(t);}
+  t.textContent=msg;t.style.opacity='1';
+  clearTimeout(t._timer);t._timer=setTimeout(()=>{t.style.opacity='0';},3000);
+}
+</script>
+</body>
+</html>
