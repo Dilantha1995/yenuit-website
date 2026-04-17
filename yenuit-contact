@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Yenuit Solutions | yenuit.com</title>
+<meta name="description" content="Get in touch with Dilantha — founder of Yenuit Solutions and PayFlow Pro. Direct email, phone, and full academic + professional credentials.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0d2d6e;--blue:#1849a9;--blue2:#eef2fc;--blue3:#c7d7f4;--green:#166534;--green2:#dcfce7;--green3:#f0fdf4;--text:#1c2030;--t2:#5c6478;--t3:#9ba3b5;--border:#dde1e8;--bg:#f4f6f9;--r:10px;--r2:16px;--red:#991b1b}
+*{font-family:'Segoe UI',system-ui,sans-serif}
+body{color:var(--text);background:#fff;line-height:1.6}
+a{color:var(--blue);text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:62px;display:flex;align-items:center;padding:0 40px;gap:20px}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-logo-box{width:34px;height:34px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff}
+.nav-brand{font-size:17px;font-weight:800;color:var(--navy)}
+.nav-links{display:flex;gap:22px;margin-left:20px}
+.nav-links a{font-size:13px;font-weight:600;color:var(--t2);transition:color .15s}
+.nav-links a:hover{color:var(--blue)}
+.nav-links a.active{color:var(--blue);font-weight:700}
+.nav-cta{margin-left:auto;display:flex;gap:10px;align-items:center}
+.nav-cta a{padding:8px 20px;background:var(--blue);color:#fff;border-radius:8px;font-size:13px;font-weight:700;transition:background .15s}
+.nav-cta a:hover{background:var(--navy)}
+
+/* HERO */
+.ct-hero{padding:70px 40px 40px;text-align:center;background:linear-gradient(175deg,#f0f4ff 0%,#fff 65%)}
+.ct-hero h1{font-size:46px;font-weight:900;color:var(--navy);letter-spacing:-1.2px;margin-bottom:14px}
+.ct-hero p{font-size:16px;color:var(--t2);max-width:560px;margin:0 auto;line-height:1.7}
+.ct-badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue2);color:var(--blue);border:1px solid var(--blue3);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;margin-bottom:20px}
+
+/* MAIN LAYOUT */
+.ct-main{max-width:1100px;margin:0 auto;padding:20px 40px 80px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+@media (max-width:900px){.ct-main{grid-template-columns:1fr}}
+
+/* CONTACT CARD */
+.ct-card{background:#fff;border:1px solid var(--border);border-radius:var(--r2);padding:30px;box-shadow:0 4px 18px rgba(0,0,0,.04)}
+.ct-card h2{font-size:22px;font-weight:900;color:var(--navy);margin-bottom:6px}
+.ct-card .lead{font-size:14px;color:var(--t2);margin-bottom:22px;line-height:1.6}
+
+.contact-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.contact-row:last-child{border-bottom:none}
+.contact-icon{width:42px;height:42px;background:var(--blue2);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.contact-body{flex:1}
+.contact-lbl{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.contact-val{font-size:15px;font-weight:700;color:var(--text)}
+.contact-val a{color:var(--blue)}
+.contact-sub{font-size:12px;color:var(--t2);margin-top:2px}
+
+/* QUALIFICATIONS */
+.qual-card{background:linear-gradient(135deg,#eef2fc 0%,#f7f9ff 100%);border-radius:var(--r2);padding:30px;border:1px solid var(--blue3)}
+.qual-card h2{font-size:22px;font-weight:900;color:var(--navy);margin-bottom:6px}
+.qual-card .lead{font-size:13px;color:var(--t2);margin-bottom:20px;line-height:1.6}
+.qual-list{display:flex;flex-direction:column;gap:12px}
+.qual-item{background:#fff;border-left:4px solid var(--blue);border-radius:8px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.qual-deg{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:3px;line-height:1.4}
+.qual-inst{font-size:12px;color:var(--t2);margin-bottom:0}
+.qual-status{display:inline-block;background:var(--green2);color:var(--green);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-top:4px}
+.qual-status.prog{background:#fef3c7;color:#92400e}
+
+/* TIMINGS & SUPPORT */
+.support-card{background:var(--bg);border-radius:var(--r2);padding:24px 26px;margin-top:20px}
+.support-card h3{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px}
+.support-card p{font-size:13px;color:var(--t2);line-height:1.8;margin-bottom:6px}
+
+/* CTA BAND */
+.cta-band{background:var(--navy);color:#fff;padding:50px 40px;text-align:center}
+.cta-band h2{font-size:28px;font-weight:900;margin-bottom:10px;letter-spacing:-.3px}
+.cta-band p{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:22px}
+.cta-band a{display:inline-block;padding:13px 28px;background:#fff;color:var(--navy);border-radius:10px;font-size:14px;font-weight:800;margin-right:10px}
+.cta-band a.sec{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+
+/* FOOTER */
+.site-footer{background:#0d1b38;color:rgba(255,255,255,.7);padding:50px 40px 26px}
+.fg{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:30px}
+@media (max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+.fb-nm{font-size:17px;font-weight:800;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.fc-hd{font-size:12px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.fc-lk{display:block;color:rgba(255,255,255,.6);font-size:13px;cursor:pointer;margin-bottom:10px;transition:color .15s}
+.fc-lk:hover{color:#fff}
+.f-bottom{max-width:1140px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:10px}
+
+/* RESPONSIVE */
+@media (max-width:700px){
+  nav{padding:0 16px;gap:12px}
+  .nav-links{gap:12px;margin-left:0}
+  .ct-hero{padding:50px 20px 30px}
+  .ct-hero h1{font-size:34px}
+  .ct-main{padding:20px;gap:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-box">Y</div>
+    <div style="display:flex;flex-direction:column;line-height:1.1">
+      <span class="nav-brand">yenuit</span>
+      <span style="font-size:9px;font-weight:600;color:var(--t2);letter-spacing:.08em;text-transform:uppercase">Business Solutions</span>
+    </div>
+    <div style="width:1px;height:30px;background:var(--border);margin:0 6px"></div>
+    <span style="font-size:13px;font-weight:700;color:var(--blue);background:var(--blue2);padding:4px 10px;border-radius:5px">💳 PayFlow Pro</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html">Products</a>
+    <a href="index.html">Features</a>
+    <a href="index.html">Pricing</a>
+    <a href="yenuit-about.html">Our Story</a>
+    <a href="#" class="active">Contact</a>
+  </div>
+  <div class="nav-cta">
+    <a href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener">Sign In →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="ct-hero">
+  <div class="ct-badge">📞 Let's connect</div>
+  <h1>Talk to the person behind Yenuit</h1>
+  <p>I'm Dilantha — accountant, founder, and the human behind every product you'll use here. Direct email, direct phone, direct response.</p>
+</div>
+
+<!-- MAIN GRID: Contact left · Qualifications right -->
+<div class="ct-main">
+
+  <!-- LEFT: Contact methods -->
+  <div>
+    <div class="ct-card">
+      <h2>Get in touch directly</h2>
+      <p class="lead">For sales, support, or just to say hi. I read every message personally.</p>
+
+      <div class="contact-row">
+        <div class="contact-icon">✉</div>
+        <div class="contact-body">
+          <div class="contact-lbl">Email (Direct)</div>
+          <div class="contact-val"><a href="mailto:dilankakgmv@gmail.com">dilankakgmv@gmail.com</a></div>
+          <div class="contact-sub">Best for detailed questions and follow-ups</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">📱</div>
+        <div class="contact-body">
+          <div class="contact-lbl">Phone — Sri Lanka</div>
+          <div class="contact-val"><a href="tel:+94768533361">+94 76 853 3361</a></div>
+          <div class="contact-sub">WhatsApp available · GMT+5:30</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">📱</div>
+        <div class="contact-body">
+          <div class="contact-lbl">Phone — Maldives</div>
+          <div class="contact-val"><a href="tel:+9609160275">+960 916 0275</a></div>
+          <div class="contact-sub">WhatsApp available · GMT+5</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">🏢</div>
+        <div class="contact-body">
+          <div class="contact-lbl">Yenuit Support Emails</div>
+          <div class="contact-val" style="font-size:13px">
+            <div><a href="mailto:hello@yenuit.com">hello@yenuit.com</a> — general inquiries</div>
+            <div><a href="mailto:support@yenuit.com">support@yenuit.com</a> — technical support</div>
+            <div><a href="mailto:billing@yenuit.com">billing@yenuit.com</a> — billing & subscriptions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUPPORT HOURS -->
+    <div class="support-card">
+      <h3>🕐 Response time</h3>
+      <p>• <strong>Email:</strong> within 24 hours, usually same day</p>
+      <p>• <strong>Phone / WhatsApp:</strong> 09:00 – 22:00 (GMT+5:30) — Monday to Saturday</p>
+      <p>• <strong>Support tickets:</strong> tracked via support@yenuit.com</p>
+    </div>
+  </div>
+
+  <!-- RIGHT: Qualifications -->
+  <div>
+    <div class="qual-card">
+      <h2>🎓 About Dilantha</h2>
+      <p class="lead">Accountant, Finance Professional, and self-taught SaaS builder. These are the qualifications behind the product you're evaluating:</p>
+
+      <div class="qual-list">
+        <div class="qual-item">
+          <div class="qual-deg">BSc. in Accountancy & Business Finance</div>
+          <div class="qual-inst">Wayamba University of Sri Lanka</div>
+          <div class="qual-status">✓ Completed</div>
+        </div>
+        <div class="qual-item">
+          <div class="qual-deg">Master of Commerce (MCom)</div>
+          <div class="qual-inst">University of Kelaniya, Sri Lanka</div>
+          <div class="qual-status">✓ Completed</div>
+        </div>
+        <div class="qual-item">
+          <div class="qual-deg">ACCA — Association of Chartered Certified Accountants</div>
+          <div class="qual-inst">8 subjects completed</div>
+          <div class="qual-status prog">⏳ In Progress</div>
+        </div>
+        <div class="qual-item">
+          <div class="qual-deg">ICASL — Institute of Chartered Accountants of Sri Lanka</div>
+          <div class="qual-inst">Business Level Completed</div>
+          <div class="qual-status">✓ Completed</div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;padding:14px;background:rgba(255,255,255,.7);border-radius:8px;font-size:12px;color:var(--t2);line-height:1.7">
+        <strong style="color:var(--navy)">Why this matters:</strong> Every feature in PayFlow Pro was designed by someone who has actually used accounting software daily — working in multi-entity groups, handling real payment approval workflows, and feeling the pain of paper-based PVs firsthand. You're not buying software built by developers guessing what accountants need. You're buying software built by an accountant.
+      </div>
+    </div>
+
+    <div class="support-card" style="margin-top:20px">
+      <h3>🤝 Prefer a call?</h3>
+      <p>Happy to jump on a Zoom / WhatsApp video call to walk you through PayFlow Pro, answer questions, or discuss custom requirements for your business. Usually available within 48 hours of request.</p>
+      <a href="mailto:dilankakgmv@gmail.com?subject=Request%20for%20demo%20call" style="display:inline-block;margin-top:10px;padding:10px 20px;background:var(--blue);color:#fff;border-radius:8px;font-size:13px;font-weight:700">📅 Request a demo call</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Ready to modernize your payment workflow?</h2>
+  <p>Start your 30-day free trial — card or bank transfer accepted</p>
+  <a href="index.html">See Pricing →</a>
+  <a href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener" class="sec">Try Live Demo</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="fg">
+    <div>
+      <div class="fb-nm">
+        <div style="width:28px;height:28px;background:#fff;color:#0d2d6e;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px">Y</div>
+        yenuit
+      </div>
+      <div style="font-size:13px;line-height:1.7;max-width:260px;color:rgba(255,255,255,.6);margin-top:6px">Business solutions for growing SMEs. Starting with PayFlow Pro — more tools coming soon.</div>
+      <div style="margin-top:12px;font-size:12px;color:rgba(255,255,255,.45)">hello@yenuit.com<br>support@yenuit.com<br>billing@yenuit.com</div>
+    </div>
+    <div><div class="fc-hd">PayFlow Pro</div>
+      <a class="fc-lk" href="index.html">Home</a>
+      <a class="fc-lk" href="index.html">Products</a>
+      <a class="fc-lk" href="index.html">Features</a>
+      <a class="fc-lk" href="index.html">Pricing</a>
+      <a class="fc-lk" href="https://payflow-psms.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+    </div>
+    <div><div class="fc-hd">Company</div>
+      <a class="fc-lk" href="yenuit-about.html">Our Story</a>
+      <a class="fc-lk" href="yenuit-about.html">About Dilantha</a>
+      <a class="fc-lk" href="yenuit-contact.html">Contact Us</a>
+    </div>
+    <div><div class="fc-hd">Support</div>
+      <a class="fc-lk" href="yenuit-contact.html">Get in Touch</a>
+      <span class="fc-lk">Privacy Policy</span>
+      <span class="fc-lk">Terms of Service</span>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2026 Yenuit Solutions Pvt Ltd · yenuit.com</span>
+    <span>Built with 🤖 Claude AI</span>
+  </div>
+</footer>
+
+</body>
+</html>
